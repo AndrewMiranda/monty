@@ -22,3 +22,63 @@
 - `mul` - multiplies the top two elements of the stack
 - `div` - divides the second element of the stack by the top element of the stack
 - `mod` - returns the remainder of dividing the second element of the stack by the top element of the stack
+
+
+## Project Requirements
+- Formatted with Betty style standards
+- Compiled with gcc 4.8.4 (C90) using the flags `-Wall` `-Werror` `-Wextra` and `-pedantic`
+- Maximum of one global variable
+- No more than 5 functions per file
+- Function prototypes should be included in a header file called `monty.h`
+- Header files should be include guarded
+
+### Project Data Structure
+    /**
+     * struct stack_s - doubly linked list representation of a stack (or queue)
+     * @n: integer
+     * @prev: points to the previous element of the stack (or queue)
+     * @next: points to the next element of the stack (or queue)
+     *
+     * Description: doubly linked list node structure
+     * for stack, queues, LIFO, FIFO Holberton project
+     */
+    typedef struct stack_s
+    {
+            int n;
+            struct stack_s *prev;
+            struct stack_s *next;
+    } stack_t;
+
+
+
+    /**
+     * struct instruction_s - opcoode and its function
+     * @opcode: the opcode
+     * @f: function to handle the opcode
+     *
+     * Description: opcode and its function
+     * for stack, queues, LIFO, FIFO Holberton project
+     */
+    typedef struct instruction_s
+    {
+            char *opcode;
+            void (*f)(stack_t **stack, unsigned int line_number);
+    } instruction_t;
+
+-------------------
+
+## File Descriptions
+- `monty.h` - function declarations
+- `structs.h` - struct declarations
+- `monty.c` - main function and loop
+- `opcode_struct.c` - function that searches through struct of function pointers
+- `print_functions.c` - functions that print values from stack
+- `stack_functions.c` - functions that manipulate the stack
+- `calc_functions.c` - math functions performed on values on the stack
+- `util_functions.c` - utility functions
+
+-------------------
+
+## Authors
+*Andrew Miranda Alarcón* - [GitHub](https://github.com/AndrewMiranda)
+*Daniel Eduardo Almagro* - [GitHub](https://github.com/dany-eduard)
