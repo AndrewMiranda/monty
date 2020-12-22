@@ -38,8 +38,8 @@ void _div(stack_t **stack, unsigned int line_number);
 void _mod(stack_t **stack, unsigned int line_number); */
 
 /* utility functions */
-/* size_t stack_length(stack_t **stack);
-void free_stack(stack_t **stack);
-void free_all(stack_t *stack, char *line, FILE *fp); */
+/* size_t stack_length(stack_t **stack);*/
+void free_stack(stack_t *stack);
+/* void free_all(stack_t *stack, char *line, FILE *fp); */
 
 #endif /* MONTY_H */
