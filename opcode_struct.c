@@ -17,7 +17,7 @@ int opcode_struct(char *opcode, stack_t **stack, unsigned int line_number)
 		{NULL, NULL}
 	};
 
-	while (i < 2)
+	while (i < 3)
 	{
 		if (strcmp(op[i].opcode, opcode) == 0)
 		{
