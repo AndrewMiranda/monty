@@ -40,9 +40,9 @@ int main(int argc, char *argv[])
 		}
 		opcode_struct(argument, &stack, line_number);
 	}
-	if (line)
-		free(line);
+	free(line);
 	fclose(fd);
+	free_stack(stack);
 
 	return (0);
 }
