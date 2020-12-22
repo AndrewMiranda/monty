@@ -15,10 +15,3 @@ void free_stack(stack_t *stack)
 		free(current);
 	}
 }
-
-/**
- * void free_all(stack_t *stack, char *line, FILE *fp)
- * {
- *
- * }
-*/
