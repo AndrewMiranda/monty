@@ -1,5 +1,7 @@
 # Monty Language Interpreter
 
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewMiranda/monty?label=Repo%20Size&logo=git) ![GitHub contributors](https://img.shields.io/github/contributors/AndrewMiranda/monty?color=green&label=Contributors&logo=GitHub)
+
 **Monty** is a scripting language that is compiled into bytecodes. It relies on a stack with instructions to manipulate it. This program is an interpreter for Monty bytecode files.
 
 ---
