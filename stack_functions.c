@@ -57,3 +57,15 @@ void push(stack_t **stack, unsigned int line_number/* , char *n */)
 		(*stack)->prev = new;
 	*stack = new;
 }
+
+/**
+ * nop - doesn’t do anything.
+ * @stack: Double pointer to the head of the Stack.
+ * @line_number: Number of the line.
+ * Return: Nothing.
+ */
+void nop(stack_t **stack, unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
+}

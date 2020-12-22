@@ -14,10 +14,11 @@ int opcode_struct(char *opcode, stack_t **stack, unsigned int line_number)
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 
-	while (i < 3)
+	while (i < 4)
 	{
 		if (strcmp(op[i].opcode, opcode) == 0)
 		{
