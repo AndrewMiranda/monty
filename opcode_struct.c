@@ -21,7 +21,7 @@ int opcode_struct(char *opcode, stack_t **stack, unsigned int line_number)
 		if (strcmp(op[i].opcode, opcode) == 0)
 		{
 			op[i].f(stack, line_number);
-			break;
+			return (EXIT_SUCCESS);
 		}
 		i++;
 	}
@@ -30,5 +30,5 @@ int opcode_struct(char *opcode, stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
 		exit(EXIT_FAILURE);
 	}
-	return (0);
+	return (EXIT_SUCCESS);
 }
