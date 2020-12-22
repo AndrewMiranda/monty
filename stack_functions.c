@@ -30,17 +30,17 @@ stack_t *new_Node(int n)
  */
 void push(stack_t **stack, unsigned int line_number/* , char *n */)
 {
-        char *value = strtok(NULL, DELIMITERS);
-        stack_t *new = NULL;
-        int i = 0;
+	char *value = strtok(NULL, DELIMITERS);
+	stack_t *new = NULL;
+	int i = 0;
 	(void)line_number;
 
-        if (!value)
-        {
-                fprintf(stderr, "L%u: usage: push integer\n", line_number);
+	if (!value)
+	{
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
-        }
-        while (value[i] != '\0')
+	}
+	while (value[i] != '\0')
 	{
 		if (!isdigit(value[i]) && value[i] != '-')
 		{
@@ -49,7 +49,7 @@ void push(stack_t **stack, unsigned int line_number/* , char *n */)
 		}
 		i++;
 	}
-        
+
 	new = new_Node(atoi(value));
 
 	new->next = *stack;
@@ -60,7 +60,7 @@ void push(stack_t **stack, unsigned int line_number/* , char *n */)
 
 void pall(stack_t **stack, unsigned int line_number)
 {
-        stack_t *node = *stack;
+	stack_t *node = *stack;
 	(void)line_number;
 
 	while (node != NULL)

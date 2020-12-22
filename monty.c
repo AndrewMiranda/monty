@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	stack_t *stack = NULL;
 	char *argument = NULL, *line = NULL;
 	size_t lineSize = 0;
-	unsigned int line_number = 0; 
+	unsigned int line_number = 0;
 
 	if (argc != 2)
 	{
@@ -43,6 +43,6 @@ int main(int argc, char *argv[])
 	if (line)
 		free(line);
 	fclose(fd);
-	
+
 	return (0);
 }
