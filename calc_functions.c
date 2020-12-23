@@ -8,17 +8,17 @@
  */
 void _add(stack_t **stack, unsigned int line_number)
 {
-        stack_t *node = NULL;
-        int sum = 0;
+	stack_t *node = NULL;
+	int sum = 0;
 
-        if (!stack || !(*stack) || !(*stack)->next)
-        {
-                fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
-                exit(EXIT_FAILURE);
-        }
+	if (!stack || !(*stack) || !(*stack)->next)
+	{
+		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 
-        node = *stack;
-        sum += node->n + node->next->n;
-        node->next->n = sum;
-        pop(stack, line_number);
+	node = *stack;
+	sum += node->n + node->next->n;
+	node->next->n = sum;
+	pop(stack, line_number);
 }
