@@ -19,10 +19,11 @@ int opcode_struct(char *opcode, stack_t **stack, unsigned int line_number)
 		{"swap", swap},
 		{"add", _add},
 		{"sub", _sub},
+		{"div", _div},
 		{NULL, NULL}
 	};
 
-	while (i < 8)
+	while (i < 9)
 	{
 		if (strcmp(op[i].opcode, opcode) == 0)
 		{
