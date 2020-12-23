@@ -69,3 +69,45 @@ void nop(stack_t **stack, unsigned int line_number)
 	(void)stack;
 	(void)line_number;
 }
+
+/**
+ * pop - Removes the top element of the stack.
+ * @stack: Double pointer to the head of the Stack.
+ * @line_number: Number of the line.
+ * Return: Nothing.
+ */
+void pop(stack_t **stack, unsigned int line_number)
+{
+	stack_t *node = NULL;
+
+	if (*stack == NULL || stack == NULL)
+	{
+		dprintf(STDERR_FILENO, "L%d: can't pop an empty stack\n", line_number);
+	}
+	node = *stack;
+	*stack = node->next;
+	if (node->next != NULL)
+		node->next->prev = node->prev;
+	free(node);
+}
+
+/**
+ * swap - This function swaps the top two elements of the stack.
+ * @stack: Double pointer to the head of the Stack.
+ * @line_number: Number of the line.
+ * Return: Nothing.
+ */
+void swap(stack_t **stack, unsigned int line_number)
+{
+	int tmp = 0;
+
+	if (!stack || !(*stack) || !(*stack)->next)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+
+	tmp = (*stack)->n;
+	(*stack)->n = (*stack)->next->n;
+	(*stack)->next->n = tmp;
+}
